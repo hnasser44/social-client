@@ -6,7 +6,7 @@ function App() {
   const [admins, setAdmins] = useState([]);
 
   const getAdmins = async () => {
-    const admins = await axios.get("/api/admins");
+    const admins = await axios.get("https://social-server-zo6i.onrender.com/api/admins");
     console.log(admins);
     setAdmins(admins.data);
   };
