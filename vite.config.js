@@ -10,14 +10,5 @@ export default () => {
   return defineConfig({
     // To access env vars here use process.env.TEST_VAR
     plugins: [react()],
-    server: {
-      proxy: {
-        "/api": {
-          target: process.env.SERVER_URL,
-          changeOrigin: true,
-          ws: true,
-        },
-      },
-    },
   });
 };
